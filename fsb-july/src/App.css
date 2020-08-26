@@ -339,7 +339,7 @@ li{
   .sub-logo img{
     height: 22vh;
     padding-bottom: 4vh;
-    padding-left: 23vw;
+    padding-left: 20vw;
     text-align: center;
   }
 
@@ -347,7 +347,7 @@ li{
     
     height: 22vh;
     padding-bottom: 4vh;
-    padding-left: 14vw;
+    padding-left: 4vw;
     padding-top: 5vh;
     text-align: center;
   }
@@ -392,6 +392,16 @@ li{
   font-size: 7vh;
   letter-spacing: 20px;
 
+}
+@media(max-width:800px){
+ 
+.Gal-top-big-thing{
+  text-align: center;
+  padding: 5vh;
+  font-size: 5vh;
+  letter-spacing: 20px;
+
+} 
 }
 
 .BACK-Button{
@@ -547,7 +557,8 @@ li{
 @media (max-width: 800px){
   .Collapsible__contentInner{
     display: flex;
-    padding-left: 15vw;
+    flex-direction: column;
+    padding-left: 27vw;
   }
 
   .Collapsible__trigger{
@@ -557,9 +568,11 @@ li{
     box-shadow: 3px 5px rgb(41, 40, 40);
     padding: 1vh;
     padding-right: -1.5vh;
-    font-size: 2em;
-    margin-left: 23vw;
+    font-size: 1em;
+    justify-content: space-around;
     border-radius: 15px;
+    margin-left: 32vw;
+    margin-right:0vh;
     width: 20%;
     cursor: pointer;
   }

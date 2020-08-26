@@ -10,6 +10,11 @@ export const photos = [
       height: 1
     },
     {
+      src: require('./Attachments/concept 1-com.jpg'),
+      width: 4,
+      height: 3
+    },
+    {
       src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
       width: 3,
       height: 4
