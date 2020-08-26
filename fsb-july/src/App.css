@@ -1,3 +1,5 @@
+/* Change the last section in the css file that makes responsive problems */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
 *{
   
@@ -22,7 +24,6 @@
   
 
 }
-
 
 .comp-name{
   /* position: absolute; */
@@ -86,6 +87,52 @@ li{
 
 }
 
+@media(max-width: 800px){
+  .comp-name{
+    /* position: absolute; */
+    /* padding-top: 1px; */
+    padding-left: 1vw;
+    font-size: 6.5vw;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(245, 245, 245, 0);
+    color: rgba(255, 255, 255, 0.801);
+  
+  }
+  .tagline{
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    /* background: -webkit-linear-gradient(rgb(68, 66, 165), rgb(218, 69, 106));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 4vw;
+    font-family: 'Autography';
+  }
+  
+  .CONTAINER-Top-Part{
+    background-image: url(./Attachments/Top-part-bkg1.png);
+    height: 70vh;
+    /* width: 100vw; */
+    /* height: 70vh; */
+    /* for mobile view */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  
+  }
+  .contactus-p{
+    font-size: 6vw;
+
+  }
+  .Socials-part{
+    padding-left: 22vw;
+    padding-top: 12vh;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+}
+
+
 .Gallery{
   height: 130vh;
   background-color: black;
@@ -93,7 +140,7 @@ li{
 }
 .Gal-head{
   text-align: center;
-  font-size: 5vw;
+  font-size: 4vw;
   background-color: rgba(245, 245, 245, 0);
 
 
@@ -110,7 +157,7 @@ li{
 .gallery-1-row img{
   width: 30vw;
   height: 40vh;
-  padding: 1vh .5vw 1vh .5vw;
+  padding: 1vh .5vw .5vh .5vw;
   object-fit: cover;
 }
 .gallery-2-row{
@@ -118,12 +165,45 @@ li{
   flex-direction: row;
   background-color: rgba(255, 230, 230, 0);
   padding-left: 15vw;
-  padding-top: 1vh;
+  padding-top: 0.5vh;
 }
 
 .gallery-2-row img{
   width: 30vw;
+  height: 40vh;
   object-fit: cover;
+}
+
+/* mobile view for the gallery section */
+
+@media(max-width:800px){
+.Gal-head{
+  text-align: center;
+  font-size: 7vw;
+  background-color: rgba(245, 245, 245, 0);
+
+
+}
+.gallery-1-row img{
+  width: 30vw;
+  height: 40vh;
+  padding: 1vh .5vw .25vh .5vw;
+  object-fit: cover;
+}
+.gallery-2-row{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 230, 230, 0);
+  padding-left: 15vw;
+  padding-top: 0vh;
+}
+
+.Gallery{
+  height: 110vh;
+  background-color: black;
+  color: white;
+}
+
 }
 
 .CONTAINER-ABT-us {
@@ -153,10 +233,41 @@ li{
   text-align: left;
 
 }
+@media(max-width: 800px){
+  .abt-head{
+    text-align: center;
+    font-size: 7vw;
+    background-color: rgba(245, 245, 245, 0);
+    padding-bottom: 10vh;
+  }
 
+  .CONTAINER-ABT-us {
+    height: 80vh;
+    background-image:linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.171), rgb(0, 0, 0)), url(./Attachments/MIC.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+
+  .ABT-us-big-text{
+    margin-right: 10vw;
+    margin-left: 10vw;
+    padding: 3vh 2vw 3vh 2vw;
+    color: white;
+    font-size: 4vw;
+    background-color: rgba(245, 245, 245, 0.199);
+    backdrop-filter: blur(.85vh);
+    border-radius: 5vh;
+    text-align: left;
+  
+  }
+
+
+}
 .CONTAINER-ABT-US-PARTii{
   
-  height: 100vh;
+  height: 110vh;
   background-color: black;
   color: white;
 
@@ -171,11 +282,28 @@ li{
   padding-left: 9vw;
 }
 .sub-logo img{
-  height: 30vh;
+  height: 10vw;
   padding-bottom: 4vh;
   padding-left: 9vw;
   text-align: center;
 }
+.sub-logo-2{
+  padding-left: 9vw;
+
+
+
+}
+.sub-logo-2 img{
+  
+  height: 10vw;
+  padding-bottom: 4vh;
+  padding-left: 9vw;
+  text-align: center;
+}
+.removing-underline{
+  text-decoration: none;
+}
+
 .sub-logo-intro{
   padding: 2vh 0vw 2vh 2vw;
   text-align: left;
@@ -200,4 +328,239 @@ li{
 }
 .cont-sub-log{
   padding-left: 1vw;
+}
+
+@media(max-width: 800px){
+  .ABT-us-2-subbrands{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-logo img{
+    height: 22vh;
+    padding-bottom: 4vh;
+    padding-left: 23vw;
+    text-align: center;
+  }
+
+  .sub-logo-2 img{
+    
+    height: 22vh;
+    padding-bottom: 4vh;
+    padding-left: 14vw;
+    padding-top: 5vh;
+    text-align: center;
+  }
+
+  .sub-logo-intro{
+    padding: 3.5vh 2vw 3.5vh 2vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.123);
+    width: 70vw;
+    /* height: 25vh; */
+    margin-left: 3vw;
+    margin-right: 12vw;
+    border-radius: 3vw;
+    color: white;
+  }
+
+  
+  .sub-logo-intro-two{
+    padding: 3.5vh 2vw 3.5vh 2vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.123);
+    width: 70vw;
+    /* height: 25vh; */
+    margin-left: 3vw;
+    margin-right: 12vw;
+    border-radius: 3vw;
+    color: white;
+  }
+
+
+
+
+}
+
+
+
+/* This is where the top part of GALLERY.js section of the gallery */
+
+.Gal-top-big-thing{
+  text-align: center;
+  padding: 5vh;
+  font-size: 7vh;
+  letter-spacing: 20px;
+
+}
+
+.BACK-Button{
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  color: blueviolet;
+  padding: 1vw;
+}
+
+/* This is where the top part of GALLERY.js section of the gallery ends here!*/
+
+/* This is where the services section of the main page exists */
+
+.services-one{
+  padding-left: 25vw;
+  padding-right: 20vw;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5vh;
+}
+.ourservices{
+  font-size: 6vw;
+  text-align: center;
+  padding: 1vw;
+
+}
+.services-one-head{
+  font-size: 3.5vw;
+  width: 25vw;
+
+}
+.services-one-content{
+  width: 25vw;
+}
+
+.services-two{
+  padding-left: 25vw;
+  padding-right: 20vw;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5vh;
+}
+
+.services-three{
+  padding-left: 25vw;
+  padding-right: 20vw;
+  padding-bottom: 15vh;
+  display: flex;
+  flex-direction: row;
+}
+
+@media(max-width: 800px){
+  .ourservices{
+    font-size: 7vw;
+    text-align: center;
+    padding: 1vw;
+  
+  }
+
+  .services-one{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+  }
+
+  .services-two{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 5vh;
+  }
+
+  
+  .services-three{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-one-head{
+    font-size: 6vw;
+    width: 45vw;
+
+  }
+
+  
+.services-one-content{
+  width: 80vw;
+}
+
+
+
+}
+
+
+/* This is where the services section of the main page exists */
+
+
+
+
+/* Meet the team section */
+
+.Collapsible__contentOuter{
+  margin-top: 3vh;
+}
+.Collapsible__contentInner{
+  display: flex;
+  padding-left: 34vw;
+}
+.Collapsible__trigger{
+  margin-top: 20vh;
+  background-color: #f85888;
+  font-weight: 500;
+  box-shadow: 3px 5px rgb(41, 40, 40);
+  padding: 1vh;
+  padding-right: -1.5vh;
+  font-size: 2em;
+  margin-left: 38vw;
+  border-radius: 15px;
+  width: 20%;
+  cursor: pointer;
+}
+.director-tt{
+  padding: 4vh;
+  /* box-shadow: 3px 3px rgb(41, 40, 40); */
+  font-size: 1em;
+}
+.Collapsible__trigger:hover{
+  background-color: #ff9dba;
+
+}
+
+.logoSand{
+  height: 25vh;
+  width: 25vh;
+  border-radius: 50%;
+}
+
+.Socials-part img{
+  width: 5vh;
+  padding-bottom: 2vh;
+  background-color: none;
+  /* border-radius: 1.6vh; */
+
+}
+
+@media (max-width: 800px){
+  .Collapsible__contentInner{
+    display: flex;
+    padding-left: 15vw;
+  }
+
+  .Collapsible__trigger{
+    margin-top: 20vh;
+    background-color: #f85888;
+    font-weight: 500;
+    box-shadow: 3px 5px rgb(41, 40, 40);
+    padding: 1vh;
+    padding-right: -1.5vh;
+    font-size: 2em;
+    margin-left: 23vw;
+    border-radius: 15px;
+    width: 20%;
+    cursor: pointer;
+  }
 }
