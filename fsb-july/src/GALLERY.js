@@ -4,7 +4,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "./Photos";
 import { Link } from 'react-router-dom';
 import './App.css';
-
+import './GALLERY.css'
 function GALLERY() {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -20,14 +20,14 @@ function GALLERY() {
   };
 
   return (
-    <div>
+    <div class="Ultimate-gal">
         <Link style={{ textDecoration: 'none' }} to="/">
         <h1 class="BACK-Button">
             X
         </h1>
         </Link>
         <h1 class="Gal-top-big-thing">
-            GALLERY
+            EXPLORE
         </h1>
 
 

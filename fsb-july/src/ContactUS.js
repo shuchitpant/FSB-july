@@ -4,13 +4,43 @@ import './ContactUS.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import firebase from "./firebase" 
 
 function ContactUS() {
+
+    
+
+    const [Name, setTitle] = useState('')
+    const [Email, setTime] = useState('')
+    const [Phone, setPhone] = useState('')
+    const [Subject, setSubject] = useState('')
+    const [Message, setMessage] = useState('')
+
+    function onSubmit(e) {
+        e.preventDefault()
+
+        firebase
+            .firestore()
+            .collection('Contact Us Entries')
+            .add({
+                Name,Email, Phone, Subject, Message
+            })
+            .then(() => {
+                setTitle('')
+                setTime('')
+                setPhone('')
+                setSubject('')
+                setMessage('')
+            })
+    }
+
+
+
     return (
-      <div>
+      <div class="ULTIMATE-contact-us">
           <Link style={{ textDecoration: 'none' }} to="/">
           <h1 class="closeHome">
-              X Home
+              X 
           </h1>
           </Link>
         
@@ -18,22 +48,22 @@ function ContactUS() {
                 Contact Us
             </h1>
 
-            <div class="Form" > 
+            <div class="Form" onSubmit={onSubmit}> 
                       <form >
                         <div class="input-fields">
-                            <input type="text"  name="name" class="input" placeholder="Name" />
-                            <input type="text" name="email" class="input" placeholder="Email Address"  />
-                            <input type="text" class="input" placeholder="Phone" />
-                            <input type="text" class="input" placeholder="Subject" />
+                            <input type="text"  name="name" class="input" placeholder="Name"  value={Name} onChange={e => setTitle(e.currentTarget.value) }  />
+                            <input type="text" name="email" class="input" placeholder="Email Address"  value={Email} onChange={e => setTime(e.currentTarget.value)}  />
+                            <input type="text" class="input" placeholder="Phone" value={Phone} onChange={e => setPhone(e.currentTarget.value) }  />
+                            <input type="text" class="input" placeholder="Subject"  value={Subject} onChange={e => setSubject(e.currentTarget.value) }  />
                         </div>
                         <div class="msg">
-                            <textarea placeholder="Message" name="message" type="text" ></textarea>
-                            <button onClick={ sal }  type="submit" id="btn-o"><div class="btn">  send </div></button>
+                            <textarea placeholder="Message"  value={Message} onChange={e => setMessage(e.currentTarget.value) } ></textarea>
+                            <button onClick={ sal }  id="btn-o"><div class="btn">  send </div></button>
                         </div>
                       </form>
                         
                         <div class="dets">
-                            <h1>Reach us at:</h1>
+                            <h1>  Reach us at:</h1>
                           <h2>Phone: <br/>+91 99997 83321 <br/><br/>fivesecondsblank@gmail.com<br/><br/></h2>
                           <h2>
                               
